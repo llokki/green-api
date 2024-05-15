@@ -1,0 +1,79 @@
+/* Адаптивный дизайн */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    min-height: 100%;
+}
+
+.left-panel, .right-panel {
+    padding: 20px;
+    overflow: auto;
+}
+
+.left-panel {
+    flex: 1;
+    max-width: 50%;
+    border-right: 1px solid #ccc;
+}
+
+.right-panel {
+    flex: 1;
+    max-width: 50%;
+}
+
+input, button, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.right-panel p {
+    margin-top: 0;
+    font-weight: bold;
+}
+
+#serverResponse {
+    height: 100%;
+    resize: none;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-panel, .right-panel {
+        max-width: none;
+        margin-bottom: 20px;
+    }
+
+    #serverResponse {
+        height: 300px; /* Фиксированная высота на мобильных устройствах */
+    }
+}

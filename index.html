@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница управления API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <!-- Блоки ввода -->
+            <input type="text" id="idInstance" placeholder="idInstance">
+            <input type="text" id="ApiTokenInstance" placeholder="ApiTokenInstance">
+            
+            <!-- Кнопки управления -->
+            <button id="getSettings">GetSettings</button>
+            <button id="getStateInstance">GetStateInstance</button>
+            
+            <!-- Блоки ввода для сообщений и отправки по номеру телефона -->
+            <input type="tel" id="phoneForMessage" placeholder="+7(___)-___-__-__">
+            <input type="text" id="messageText" placeholder="Введите текст сообщения">
+            
+            <!-- Кнопка отправки сообщения -->
+            <button id="sendMessage">SendMessage</button>
+            
+            <!-- Блоки ввода для отправки файла и номера телефона -->
+            <input type="tel" id="phoneForFile" placeholder="+7(___)-___-__-__">
+            <input type="text" id="urlRequest" placeholder="Введите URL запроса">
+            
+            <!-- Кнопка для отправки файла по URL -->
+            <button id="sendFileByUrl">SendFileByUrl</button>
+        </div>
+        
+        <div class="right-panel">
+            <p>Ответ:</p>
+            <textarea id="serverResponse" readonly></textarea>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
