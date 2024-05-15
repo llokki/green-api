@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('sendMessage').addEventListener('click', () => {
     var message = document.getElementById('messageText').value;
     var phoneNumber = document.getElementById('phoneForMessage').value;
-    performPostRequest('sendMessage', { chatId: phoneNumber + '@c.us', message: message });
+    performPostRequest('sendMessage', { phone: phoneNumber + '@c.us', message: message });
   });
   
   document.getElementById('sendFileByUrl').addEventListener('click', () => {
