@@ -45,14 +45,14 @@ document.addEventListener('DOMContentLoaded', function() {
   
   document.getElementById('sendMessage').addEventListener('click', () => {
     var message = document.getElementById('messageText').value;
-    var phoneNumber = document.getElementById('phoneForMessage').value;
-    performPostRequest('sendMessage', { chatId: phoneNumber + '@c.us', message: message });
+    var chatId = document.getElementById('phoneForMessage').value;
+    performPostRequest('sendMessage', { chatId: chatId + '@c.us', message: message });
   });
   
   document.getElementById('sendFileByUrl').addEventListener('click', () => {
     var fileUrl = document.getElementById('urlRequest').value;
-    var phoneNumber = document.getElementById('phoneForFile').value;
-    performPostRequest('sendFileByUrl', { chatId: phoneNumber + '@c.us', fileUrl: fileUrl });
+    var chatId = document.getElementById('phoneForFile').value;
+    performPostRequest('sendFileByUrl', { chatId: chatId + '@c.us', fileUrl: fileUrl });
   });
   
 });
