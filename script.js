@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function performGetRequest(endpoint) {
     var idInstance = document.getElementById('idInstance').value;
     var apiTokenInstance = document.getElementById('ApiTokenInstance').value;
-    var url = `${apiUrl}waInstance${idInstance}/${endpoint}/${apiTokenInstance}`;
+    var url = `${apiUrl}/waInstance${idInstance}/${endpoint}/${apiTokenInstance}`;
     fetch(url)
       .then(response => response.json())
       .then(data => {
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function performPostRequest(endpoint, bodyData) {
     var idInstance = document.getElementById('idInstance').value;
     var apiTokenInstance = document.getElementById('ApiTokenInstance').value;
-    var url = `${apiUrl}waInstance${idInstance}/${endpoint}/${apiTokenInstance}`;
+    var url = `${apiUrl}/waInstance${idInstance}/${endpoint}/${apiTokenInstance}`;
   
     fetch(url, {
       method: 'POST',
