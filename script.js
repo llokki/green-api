@@ -46,13 +46,13 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('sendMessage').addEventListener('click', () => {
     var message = document.getElementById('messageText').value;
     var phoneNumber = document.getElementById('phoneForMessage').value;
-    performPostRequest('sendMessage', { phone: phoneNumber, message: message });
+    performPostRequest('sendMessage', { chatId: phoneNumber + '@c.us', message: message });
   });
   
   document.getElementById('sendFileByUrl').addEventListener('click', () => {
     var fileUrl = document.getElementById('urlRequest').value;
     var phoneNumber = document.getElementById('phoneForFile').value;
-    performPostRequest('sendFileByUrl', { phone: phoneNumber, fileUrl: fileUrl });
+    performPostRequest('sendFileByUrl', { phone: phoneNumber + '@c.us', fileUrl: fileUrl });
   });
   
 });
